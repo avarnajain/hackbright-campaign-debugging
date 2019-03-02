@@ -36,11 +36,10 @@ def make_text(chains):
     while key in chains and count <= 140:
         word = choice(chains[key])
         count += len(word) + 1
-
+        
         if count > 140:
             while words[-1][-1] not in ['!','.','?']:
                 del words[-1]
-                # print('DELETED', words[-1])
             break
 
         words.append(word)
